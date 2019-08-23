@@ -1,4 +1,4 @@
-'use strict'; 
+"use strict";
 // Есть переменная message в которую будет записано сообщение о результате. При загрузке страницы у посетителя запрашивается пароль через prompt:
 
 // Если нажали Cancel, записать в message строку 'Отменено пользователем!'
@@ -8,21 +8,15 @@
 // const ADMIN_PASSWORD = 'jqueryismyjam';
 // let message;
 
+const ADMIN_PASSWORD = "jqueryismyjam";
 
+let message = "Отменено пользователем!";
 
-const ADMIN_PASSWORD = 'jqueryismyjam';
-
-let message = prompt ('Введите пароль');
-
-if (!message) {
-    console.log('Отменено пользователем!');
+const userInput = prompt("Введите пароль");
+if (!userInput) {
+  alert(message);
+} else if (userInput === ADMIN_PASSWORD) {
+  alert("Добро пожаловать!");
+} else {
+  alert("Доступ запрещен, неверный пароль!");
 }
-
-else if (message === ADMIN_PASSWORD) {
-    console.log('Добро пожаловать!');
-}
-
-else {
-    console.log('Доступ запрещен, неверный пароль!');
-}
-
